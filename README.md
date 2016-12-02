@@ -19,12 +19,12 @@ This **bot** will work without the possibility of seeing all the messages in a g
 [(privacy mode)](https://core.telegram.org/bots#privacy-mode)
 and so to write to him you need to send a message that starts with **/**
 
-- **/start** starts the bot and prints the help message
-- **/help** prints the help message
-- **/add** add an item to the list
-- **/list** 
-- **/remove**
-- **/clear**
+- **/start**    starts the bot and prints the help message
+- **/help**     prints the help message
+- **/add**      add an item to the list
+- **/list**     show the list
+- **/remove N** remove the item with index N  
+- **/clear**    clear the whole list
 
 The commands should be case insensitive
 
