@@ -1,12 +1,21 @@
 {
-	"ImportPath": "github.com/odgbot",
+	"ImportPath": "github.com/AntonioLangiu/odgbot",
 	"GoVersion": "go1.7",
 	"GodepVersion": "v75",
 	"Deps": [
 		{
+			"ImportPath": "github.com/boltdb/bolt",
+			"Comment": "v1.3.0-34-g0d9f544",
+			"Rev": "0d9f544bb94aac29c185968483459ef74d6deb5d"
+		},
+		{
 			"ImportPath": "github.com/technoweenie/multipartstreamer",
 			"Comment": "v1.0.1",
 			"Rev": "a90a01d73ae432e2611d178c18367fbaa13e0154"
+		},
+		{
+			"ImportPath": "golang.org/x/sys/unix",
+			"Rev": "478fcf54317e52ab69f40bb4c7a1520288d7f7ea"
 		},
 		{
 			"ImportPath": "gopkg.in/telegram-bot-api.v4",
