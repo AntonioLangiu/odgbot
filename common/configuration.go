@@ -13,7 +13,7 @@ type Configuration struct {
 func LoadConfiguration() *Configuration {
     file, err := os.Open("config/config.json")
     if err != nil {
-        log.Panic("error, invalid config file");
+        log.Printf("error, invalid config file");
     }
     decoder := json.NewDecoder(file)
     configuration := Configuration{}
