@@ -1,10 +1,11 @@
-package main
+package odgbot
 
 import (
     "os"
     "encoding/json"
     "log"
     "gopkg.in/telegram-bot-api.v4"
+    "github.com/tidwall/buntdb"
 )
 
 type Configuration struct {
@@ -24,17 +25,14 @@ func main() {
     u := tgbotapi.NewUpdate(0)
     u.Timeout = 60
     updates, err := bot.GetUpdatesChan(u)
+    // TODO: check err
 
+    var out string
     // Handle each request
     for update := range updates {
         if update.Message == nil {
             continue
         }
-
-
-
-
-
         if update.Message.IsCommand() {
             var command string = update.Message.Command()
             // general commands
