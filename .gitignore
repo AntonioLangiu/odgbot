@@ -1,2 +1,3 @@
 config/config.json
 data.db
+vendor/*/
