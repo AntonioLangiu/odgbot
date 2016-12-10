@@ -11,12 +11,19 @@ type Configuration struct {
 }
 
 func LoadConfiguration() *Configuration {
-    file, _ := os.Open("config/config.json")
+    file, err := os.Open("config/config.json")
+    if err != nil {
+        log.Panic("error, invalid config file");
+    }
     decoder := json.NewDecoder(file)
     configuration := Configuration{}
-    err := decoder.Decode(&configuration)
+    err = decoder.Decode(&configuration)
     if err != nil {
         log.Printf("error:", err)
+    }
+    token := os.Getenv("BOT_TOKEN")
+    if token != "" {
+        configuration.TelegramAPI = token
     }
     log.Printf("the key is %s", configuration.TelegramAPI)
     return &configuration
